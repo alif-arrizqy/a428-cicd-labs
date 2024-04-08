@@ -24,7 +24,7 @@ pipeline {
         stage('Deploy') {
             steps {
                 sh './jenkins/scripts/deliver.sh'
-                sleep time: 1000, unit: 'MILLISECONDS'
+                sleep time: 60000, unit: 'MILLISECONDS'
                 sh './jenkins/scripts/kill.sh'
             }
         }
